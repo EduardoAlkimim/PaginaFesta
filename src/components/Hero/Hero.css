@@ -1,18 +1,17 @@
+/* src/components/Hero/Hero.css */
+
 .hero-container {
-  height: 60vh; /* 60% da altura da tela */
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start; /* Alinha o conteúdo à esquerda */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  height: 60vh;
   padding: 0 5%;
   position: relative;
+  display: flex;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  color: #fff; /* Garante que o texto dentro seja branco para contraste */
 }
 
-/* Um overlay escuro para melhorar a legibilidade do texto */
+/* Overlay escuro para melhorar a leitura do texto */
 .hero-container::before {
   content: '';
   position: absolute;
@@ -20,42 +19,67 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.4); /* Escurece um pouco mais para o texto aparecer */
+  z-index: 0; /* Certifique-se de que o overlay está abaixo do conteúdo */
 }
 
-
 .hero-content {
-  color: #fff;
-  text-align: left;
   z-index: 1; /* Garante que o conteúdo fique acima do overlay */
   max-width: 600px;
+  /* Remova qualquer background-color daqui se houver */
+  /* background-color: transparent; <-- Se você ver um background-color, remova-o ou defina como transparent */
 }
 
 .hero-content h1 {
-  font-size: 3rem;
-  margin: 0;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-family: 'Comfortaa', sans-serif; /* Usando Comfortaa aqui também */
+  font-size: 3.5rem; /* Aumenta um pouco o título */
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7); /* Sombra mais forte para o texto */
+  margin-bottom: 15px;
 }
 
 .hero-content p {
-  font-size: 1.5rem;
+  font-size: 1.3rem; /* Ajusta o tamanho do parágrafo */
   margin-top: 10px;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Sombra para o parágrafo */
 }
 
 .hero-btn {
-  margin-top: 20px;
-  padding: 12px 30px;
-  font-size: 1.2rem;
-  background-color: #ff914d; /* Cor laranja do botão */
+  margin-top: 30px;
+  padding: 14px 35px; /* Ajusta o padding do botão */
+  font-size: 1.1rem;
+  background-color: #ff914d; /* Cor do botão */
   color: #fff;
   border: none;
-  border-radius: 50px;
+  border-radius: 50px; /* Mais arredondado */
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.2s ease;
   font-weight: bold;
 }
 
 .hero-btn:hover {
-  background-color: #ff7f50;
+  background-color: #ff7f50; /* Cor mais escura no hover */
+  transform: translateY(-2px);
+}
+
+/* Responsividade */
+@media screen and (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+  .hero-content p {
+    font-size: 1.1rem;
+  }
+  .hero-btn {
+    padding: 10px 25px;
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+  .hero-content p {
+    font-size: 1rem;
+  }
 }

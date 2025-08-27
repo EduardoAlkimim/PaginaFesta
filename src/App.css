@@ -1,4 +1,6 @@
-
+body{
+  background-color: #ffff;
+}
 
 /* --- RESET E BASE SÓLIDA --- */
 html, body, #root {
