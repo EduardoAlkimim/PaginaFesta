@@ -1,0 +1,154 @@
+/* Container principal do header */
+.header {
+  background-color: #fff;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 40px;
+  border-bottom: 1px solid #f0f0f0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* O Navbar que organiza todos os grupos de elementos */
+.navbar {
+  width: 100%;
+  max-width: 1400px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px; /* Adiciona um espaço geral */
+}
+
+/* --- LOGO --- */
+.navbar-logo img {
+  height: 45px;
+  display: block;
+}
+
+/* --- LINKS DE NAVEGAÇÃO --- */
+.nav-menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 35px;
+  margin: 0;
+  padding: 0;
+  
+  /* Flex-grow para ajudar a empurrar as ações para a direita */
+  flex-grow: 1; 
+  justify-content: center; /* Centraliza os links */
+}
+
+.nav-link {
+  color: #333;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #ff7f50;
+}
+
+/* --- AÇÕES (Carrinho e Busca) --- */
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 25px; /* Espaço entre o carrinho e a busca */
+}
+
+/* Ícone do Carrinho */
+.cart-icon {
+  position: relative;
+  font-size: 1.6rem; /* Aumenta um pouco o ícone */
+  color: #333;
+  display: flex;
+}
+
+.cart-badge {
+  position: absolute;
+  top: -5px;
+  right: -10px;
+  background-color: #ff6f61; /* Cor laranja/vermelha da notificação */
+  color: white;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.75rem;
+  font-weight: bold;
+  border: 2px solid white; /* Borda branca como na imagem */
+}
+
+/* Barra de Busca */
+.search-container {
+  display: flex;
+  border: 1px solid #ccc;
+  border-radius: 50px; /* Bordas bem arredondadas */
+  overflow: hidden;
+  background-color: #f7f7f7;
+}
+
+.search-input {
+  border: none;
+  outline: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: transparent;
+}
+
+.search-button {
+  background-color: #4a90e2; /* Azul do botão de busca */
+  color: white;
+  border: none;
+  padding: 0 18px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.search-button:hover {
+  background-color: #357abd;
+}
+
+
+/* --------------------------------- */
+/* -------- RESPONSIVIDADE --------- */
+/* --------------------------------- */
+@media screen and (max-width: 1024px) {
+  /* Em telas de tablet, escondemos os links para não comprimir tudo */
+  .nav-menu {
+    display: none;
+  }
+  .navbar {
+    justify-content: space-between;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    padding: 0 20px;
+  }
+
+  /* Em telas de celular, escondemos o texto da busca para economizar espaço */
+  .search-input {
+    display: none;
+  }
+  .search-container {
+    background-color: transparent;
+    border: none;
+  }
+  .search-button {
+    background-color: transparent;
+    color: #333;
+    font-size: 1.5rem;
+  }
+}

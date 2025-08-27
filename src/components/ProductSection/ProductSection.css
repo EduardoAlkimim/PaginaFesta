@@ -1,0 +1,48 @@
+/* src/components/ProductSection/ProductSection.css */
+
+.product-section {
+  padding: 60px 20px;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+/* NOVO ESTILO PARA O CABEÇALHO DA SEÇÃO */
+.section-header {
+  text-align: center; /* Centraliza todo o texto dentro dele */
+  margin-bottom: 50px; /* Aumenta o espaço abaixo */
+}
+
+.section-header h2 {
+  font-family: 'Comfortaa', sans-serif; /* Aplica a fonte Comfortaa */
+  font-size: 2.8rem;
+  color: #2c3e50; /* Um tom de azul escuro */
+  margin: 0;
+  font-weight: 700;
+}
+
+/* NOVO ESTILO PARA O SUBTÍTULO */
+.section-subtitle {
+  font-size: 1.1rem;
+  color: #7f8c8d; /* Um tom de cinza */
+  margin-top: 10px; /* Espaço entre o título e o subtítulo */
+}
+
+/* O grid que organiza os cards */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+/* Mensagens de feedback (Carregando... / Erro:) */
+.feedback-message {
+  text-align: center;
+  padding: 60px 20px;
+  font-size: 1.2rem;
+  color: #555;
+}
+
+.feedback-message.error {
+  color: #d9534f;
+  font-weight: bold;
+}

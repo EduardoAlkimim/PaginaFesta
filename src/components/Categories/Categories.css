@@ -1,0 +1,84 @@
+/* Container principal da seção */
+.categories-section {
+  padding: 60px 20px;
+  background-color: #fdfdff; /* Um branco levemente azulado */
+  text-align: center;
+}
+
+/* Título e subtítulo */
+.section-title h2 {
+  font-family: 'Comfortaa', sans-serif; /* Usando a fonte que instalamos! */
+  font-size: 2.8rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.section-title p {
+  font-size: 1.1rem;
+  color: #777;
+  margin-bottom: 50px;
+}
+
+/* Container que alinha as categorias */
+.categories-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 60px; /* Espaçamento entre as categorias */
+  flex-wrap: wrap; /* Permite quebrar a linha em telas menores */
+}
+
+/* Card individual de cada categoria */
+.category-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px; /* Espaço entre a nuvem e o texto */
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.category-card:hover {
+  transform: translateY(-10px); /* Efeito de flutuar ao passar o mouse */
+}
+
+/* A MÁGICA DA NUVEM ACONTECE AQUI */
+.image-background {
+  width: 160px;
+  height: 160px;
+  border-radius: 48% 52% 67% 33% / 41% 43% 57% 59%; /* Forma de "nuvem" irregular */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: border-radius 0.4s ease; /* Animação suave na forma */
+}
+
+/* Efeito de hover na nuvem */
+.image-background:hover {
+  border-radius: 33% 67% 30% 70% / 57% 63% 37% 43%; /* Muda a forma da nuvem */
+}
+
+/* Cores específicas para cada nuvem */
+.image-background.blue {
+  background-color: #e3edff;
+}
+.image-background.pink {
+  background-color: #ffdde6;
+}
+.image-background.green {
+  background-color: #e3ffea;
+}
+
+/* Imagem/ícone dentro da nuvem */
+.image-background img {
+  width: 70%; /* A imagem ocupa 70% do espaço da nuvem */
+  height: auto;
+  object-fit: contain;
+}
+
+/* Texto da categoria */
+.category-label {
+  font-size: 1.1rem;
+  color: #555;
+  font-weight: 500;
+}
